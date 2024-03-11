@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -60,7 +61,7 @@ io.on('connection',(socket)=>{
   
 })
 
-server.listen(3001, () => {
-    console.log("Server started at port 3001");
+server.listen(PORT, () => {
+    console.log(`Server started at port ${PORT}`);
   });
   
